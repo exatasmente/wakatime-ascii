@@ -25,7 +25,7 @@
         <div class="flex w-full justify-end p-4">
             <button class="mx-auto lg:mx-0 hover:underline bg-indigo-300 focus:bg-indigo-200 hover:bg-indigo-400 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg" type="submit">Generate</button>
         </div>
-        <pre class="w-full m-auto " x-text="ascii">
+        <pre class="w-full m-auto  overflow-hidden" x-text="ascii">
 
         </pre>
     </form>
@@ -51,8 +51,8 @@
                 this.ascii = "";
                 values.map((el) => {
                     el.value = el.value.toFixed(2);
-                    let div = (el.value * 5) / (maxValue)
-                    let mod = (el.value * 5) % (maxValue)
+                    let div = (el.value * 3) / (maxValue)
+                    let mod = (el.value * 3) % (maxValue)
                     let bar = String.fromCharCode(9619).repeat(div)
                     console.log(bar)
                     if (mod > 0 ){
